@@ -1,5 +1,6 @@
 package org.androidtown.sampleintent;
 
+import android.content.ComponentName;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -28,7 +29,15 @@ public static final int REQUEST_CODE_MENU = 101;
         }
     }
     public void onButton1Clicked(View v){
-        Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
+        Intent intent = new Intent();
+        ComponentName name = new ComponentName("org.androidtown.sampleintent", "org.androidtown.sampleintent.MenuActivity");
+        intent.setComponent(name);
         startActivityForResult(intent, REQUEST_CODE_MENU);
     }
+
+
+  /*  public void onButton1Clicked(View v){
+        Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
+        startActivityForResult(intent, REQUEST_CODE_MENU);
+   }*/
 }
