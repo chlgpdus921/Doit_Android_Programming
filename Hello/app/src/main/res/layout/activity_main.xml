@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.androidtown.hello.MainActivity"><![CDATA[
+
+
+       />
+]]>
+
+       <LinearLayout
+           android:layout_width="363dp"
+           android:layout_height="399dp"
+           android:orientation="horizontal"
+           tools:layout_editor_absoluteX="11dp"
+           tools:layout_editor_absoluteY="39dp">
+
+              <Button
+                  android:id="@+id/button6"
+                  android:layout_width="94dp"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1"
+                  android:onClick="onButton3Clicked"
+                  android:text="메뉴화면 띄우기" />
+
+              <Button
+                  android:id="@+id/button5"
+                  android:layout_width="87dp"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1"
+                  android:baselineAligned="false"
+                  android:onClick="onButton1Clicked"
+                  android:text="네이버 바로가기" />
+
+              <Button
+                  android:id="@+id/button4"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1"
+                  android:onClick="onButton2Clicked"
+                  android:text="전화걸기" />
+       </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
