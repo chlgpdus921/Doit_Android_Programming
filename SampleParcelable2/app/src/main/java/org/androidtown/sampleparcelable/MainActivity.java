@@ -17,7 +17,7 @@ public static final int REQUEST_CODE_MENU = 101;
     public void onButton1Clicked(View v){
         Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
         SimpleData data = new SimpleData(100, "Hello android!");
-        intent.putExtra(KEY_SIMPLE_DATA, data);
+        intent.putExtra(KEY_SIMPLE_DATA, data); //putExtra를 사용해 simpledata를 부가데이터로 추가함. -> 객체꺼내서 사용가능.
         startActivityForResult(intent, REQUEST_CODE_MENU);
 
     }

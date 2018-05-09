@@ -32,7 +32,7 @@ public class SimpleData implements Parcelable {
     }
 
     @Override
-    public void writeToParcel(Parcel dest, int flags) {
+    public void writeToParcel(Parcel dest, int flags) { //parcel객체로 만듬.
         dest.writeInt(number);
         dest.writeString(message);
     }
