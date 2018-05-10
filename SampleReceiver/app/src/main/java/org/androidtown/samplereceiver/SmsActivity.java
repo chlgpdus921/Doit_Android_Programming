@@ -8,21 +8,22 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class SmsActivity extends AppCompatActivity {
-EditText content, number, time;
-Button button;
+    EditText content, number, time;
+    Button button;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sms);
 
-        content = (EditText)findViewById(R.id.content);
-        number = (EditText)findViewById(R.id.number);
-        time = (EditText)findViewById(R.id.time);
-        button = (Button)findViewById(R.id.button);
+        content = (EditText) findViewById(R.id.content);
+        number = (EditText) findViewById(R.id.number);
+        time = (EditText) findViewById(R.id.time);
+        button = (Button) findViewById(R.id.button);
 
-        button.setOnClickListener(new View.OnClickListener(){
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
+            public void onClick(View v) {
                 finish();
             }
         });
@@ -30,13 +31,14 @@ Button button;
         Intent passedIntent = getIntent();
         processedIntent(passedIntent);
     }
-    public void onNewIntent(Intent intent){
+
+    public void onNewIntent(Intent intent) {
         processedIntent(intent);
         super.onNewIntent(intent);
     }
 
-    private void processedIntent(Intent intent){
-        if(intent !=null){
+    private void processedIntent(Intent intent) {
+        if (intent != null) {
             String sender = intent.getStringExtra("sender");
             String contents = intent.getStringExtra("contents");
             String receivedDate = intent.getStringExtra("receivedDate");

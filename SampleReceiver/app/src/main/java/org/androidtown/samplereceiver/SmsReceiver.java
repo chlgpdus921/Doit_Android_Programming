@@ -14,15 +14,16 @@ import java.util.Date;
 
 public class SmsReceiver extends BroadcastReceiver {
     public static final String TAG = "SmsReceiver";
-public SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    public SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
     @Override
     public void onReceive(Context context, Intent intent) {
         Log.i(TAG, "onReceive() 호출됨");
 
         Bundle bundle = intent.getExtras();
-        SmsMessage[] messages= parseSmsMessage(bundle);
+        SmsMessage[] messages = parseSmsMessage(bundle);
 
-        if((messages != null) && (messages.length > 0)){
+        if ((messages != null) && (messages.length > 0)) {
 
             String sender = messages[0].getOriginatingAddress();
             Log.i(TAG, "SMS sender : " + sender);
@@ -39,34 +40,33 @@ public SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         }
 
     }
-private void sendToActivity(Context context, String sender, String contents, Date receivedDate){
+
+    private void sendToActivity(Context context, String sender, String contents, Date receivedDate) {
         Intent myIntent = new Intent(context, SmsActivity.class);
         myIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         myIntent.putExtra("sender", sender);
-    myIntent.putExtra("contents", contents);
-    myIntent.putExtra("receivedDate", format.format(receivedDate));
+        myIntent.putExtra("contents", contents);
+        myIntent.putExtra("receivedDate", format.format(receivedDate));
 
-    context.startActivity(myIntent);
+        context.startActivity(myIntent);
 
-}
-    private SmsMessage[] parseSmsMessage(Bundle bundle){
-        Object[] objs = (Object[])bundle.get("pdus");
+    }
+
+    private SmsMessage[] parseSmsMessage(Bundle bundle) {
+        Object[] objs = (Object[]) bundle.get("pdus");
         SmsMessage[] messages = new SmsMessage[objs.length];
 
         int smsCount = objs.length;
-        for(int i = 0; i<smsCount; i++){
-            if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
+        for (int i = 0; i < smsCount; i++) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 String format = bundle.getString("format");
-                messages[i] = SmsMessage.createFromPdu((byte[])objs[i], format);
-            }
-            else{
-                messages[i] = SmsMessage.createFromPdu((byte[])objs[i]);
+                messages[i] = SmsMessage.createFromPdu((byte[]) objs[i], format);
+            } else {
+                messages[i] = SmsMessage.createFromPdu((byte[]) objs[i]);
             }
         }
         return messages;
     }
-
-
 
 
 }
