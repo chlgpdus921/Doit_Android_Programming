@@ -26,7 +26,7 @@ public class newActivity extends AppCompatActivity {
 
        final Intent passedIntent = getIntent();
        final String url = passedIntent.getStringExtra("url");
-        textView.setText(url);
+       textView.setText(url);
 
         goBtn.setOnClickListener(new View.OnClickListener() {
             @Override
