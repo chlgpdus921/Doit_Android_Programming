@@ -38,6 +38,7 @@
 
     <Button
         android:id="@+id/login"
+        android:onClick="onButton1Clicked"
         android:layout_width="89dp"
         android:layout_height="133dp"
         android:layout_marginBottom="8dp"

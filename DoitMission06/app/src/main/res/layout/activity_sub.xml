@@ -8,6 +8,7 @@
 
     <Button
         android:id="@+id/menuro"
+        android:onClick="onButtonMenu"
         android:layout_width="136dp"
         android:layout_height="57dp"
         android:layout_marginBottom="8dp"
@@ -24,6 +25,7 @@
 
     <Button
         android:id="@+id/loginro"
+        android:onClick="onButtonlogin"
         android:layout_width="132dp"
         android:layout_height="56dp"
         android:layout_marginBottom="204dp"

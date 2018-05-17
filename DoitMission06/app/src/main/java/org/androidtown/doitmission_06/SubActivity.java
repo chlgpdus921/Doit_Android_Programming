@@ -21,31 +21,25 @@ Button button, button2;
 
         Intent processIntent = getIntent();
         ProcessIntent(processIntent);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
-                intent.putExtra("menu",menu);
-                intent.putExtra("id",id);
-                intent.putExtra("password",password);
-                setResult(RESULT_OK, intent);
-                startActivityForResult(intent, REQUEST_CODE);
-                finish();
-            }
-        });
 
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                intent.putExtra("menu",menu);
-                intent.putExtra("id",id);
-                intent.putExtra("password",password);
-                setResult(RESULT_OK, intent);
-                startActivityForResult(intent, REQUEST_CODE);
-                finish();
-            }
-        });
+    }
+    public void onButtonMenu(View v){
+        Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
+        intent.putExtra("menu",menu);
+        intent.putExtra("id",id);
+        intent.putExtra("password",password);
+        setResult(RESULT_OK, intent);
+        startActivityForResult(intent, REQUEST_CODE);
+        finish();
+    }
+    public void onButtonlogin(View v){
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        intent.putExtra("menu",menu);
+        intent.putExtra("id",id);
+        intent.putExtra("password",password);
+        setResult(RESULT_OK, intent);
+        startActivityForResult(intent, REQUEST_CODE);
+        finish();
     }
     protected void onNewIntent(Intent intent){
         ProcessIntent(intent);
@@ -57,7 +51,7 @@ Button button, button2;
             menu = intent.getStringExtra("menu");
             id = intent.getStringExtra("id");
             password = intent.getStringExtra("password");
-            Toast.makeText(this, "선택하신 메뉴는 "+ menu , Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "서브class -> " + "선택하신 메뉴는 "+ menu + ", id 는 " + id + ", 비밀번호는 "+ password, Toast.LENGTH_LONG).show();
         }
     }
 

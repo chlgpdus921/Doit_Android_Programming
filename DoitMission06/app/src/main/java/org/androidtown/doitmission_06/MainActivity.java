@@ -19,28 +19,30 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        button = (Button) findViewById(R.id.login);
         id = (EditText) findViewById(R.id.id);
         password = (EditText) findViewById(R.id.password);
 
         Intent passedIntent = getIntent();
         processIntent(passedIntent);
 
+    }   ;
 
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
-                String name = id.getText().toString();
-                String pass = password.getText().toString();
+    public void onButton1Clicked(View v){
+        String name = id.getText().toString();
+        String pass = password.getText().toString();
 
-                intent.putExtra("id", name);
-                intent.putExtra("password", pass);
-                startActivityForResult(intent, REQUEST_CODE);
-            }
-        });
-
+        if(name.length() ==0 || pass.length() ==0){
+            Toast.makeText(this, "아이디랑 비밀번호 둘다 입력해주세요. ", Toast.LENGTH_LONG).show();
+        }
+       else {
+            Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
+            intent.putExtra("id", name);
+            intent.putExtra("password", pass);
+            startActivityForResult(intent, REQUEST_CODE);
+            finish();
+        }
     }
+
 
     @Override
     protected void onNewIntent(Intent intent) {
@@ -53,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
               String  pasword = intent.getStringExtra("password");
               String meu = intent.getStringExtra("menu");
               String i = intent.getStringExtra("id");
-                Toast.makeText(this, "아이디는 " + i + ",  비밀번호는 " + pasword + ", 메뉴는 "+ meu, Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "main class -> 아이디는 " + i + ",  비밀번호는 " + pasword + ", 메뉴는 "+ meu, Toast.LENGTH_LONG).show();
             }
         }
     }

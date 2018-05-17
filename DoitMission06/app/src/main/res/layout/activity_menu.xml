@@ -8,6 +8,7 @@
 
     <Button
         android:id="@+id/button"
+        android:onClick="onButton2Clicked"
         android:layout_width="119dp"
         android:layout_height="51dp"
         android:layout_marginBottom="8dp"
@@ -26,6 +27,7 @@
 
     <Button
         android:id="@+id/button2"
+        android:onClick="onButton3Clicked"
         android:layout_width="114dp"
         android:layout_height="55dp"
         android:layout_marginBottom="52dp"
@@ -40,6 +42,7 @@
 
     <Button
         android:id="@+id/button3"
+        android:onClick="onButton4Clicked"
         android:layout_width="109dp"
         android:layout_height="55dp"
         android:layout_marginBottom="108dp"
