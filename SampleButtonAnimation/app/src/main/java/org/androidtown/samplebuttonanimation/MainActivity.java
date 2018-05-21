@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
             public void onAnimationStart(Animation animation) {
 
             }
-
             @Override
             public void onAnimationEnd(Animation animation) {
                 Toast.makeText(getApplicationContext(), "애니메이션 종료됨.", Toast.LENGTH_LONG).show();
