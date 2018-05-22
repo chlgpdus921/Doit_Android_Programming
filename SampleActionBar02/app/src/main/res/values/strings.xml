@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SampleActionBar02</string>
+    <string name = "menu_search">검색</string>
+</resources>
