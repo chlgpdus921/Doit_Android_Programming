@@ -1,8 +1,13 @@
 package org.androidtown.samplefragment;
 
 
+import android.content.Context;
 import android.os.Bundle;
+import android.os.PersistableBundle;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.AttributeSet;
+import android.view.View;
 
 import static org.androidtown.samplefragment.R.*;
 
@@ -27,4 +32,6 @@ public class MainActivity extends AppCompatActivity {
             getSupportFragmentManager().beginTransaction().replace(id.container, mainFragment).commit();
         }
     }
+
+
 }
