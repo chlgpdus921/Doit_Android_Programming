@@ -4,10 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!--전체 화면의 위치를 잡아준다-->
     <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <!--액션바레이아웃-->
         <android.support.design.widget.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -20,7 +22,7 @@
                 android:background="@color/colorPrimaryDark"
                 android:elevation="1dp"
                 android:theme="@style/ThemeOverlay.AppCompat.Dark">
-
+                <!--제목-->
                 <TextView
                     android:id="@+id/titleText"
                     android:layout_width="wrap_content"
@@ -29,7 +31,8 @@
                     android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title" />
             </android.support.v7.widget.Toolbar>
 
-            <android.supprot.design.widget.TabLayout
+            <!--탭레이아웃 (탭버튼들을 담을 것 -->
+            <android.support.design.widget.TabLayout
                 android:id="@+id/tabs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -39,13 +42,11 @@
                 app:tabMode="fixed"
                 app:tabSelectedTextColor="@color/colorAccent"
                 app:tabTextColor="@color/colorPrimary" />
-        </android.support.design.widget.AppBarLayout>
+    </android.support.design.widget.AppBarLayout>
 
-        <FrameLayout
-            android:id="@+id/container"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior">
-        </FrameLayout>
-    </android.support.design.widget.CoordinatorLayout>
-</RelativeLayout>
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"></FrameLayout>
+</android.support.design.widget.CoordinatorLayout></RelativeLayout>
