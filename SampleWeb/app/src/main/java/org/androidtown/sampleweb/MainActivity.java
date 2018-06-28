@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         webView.loadUrl("file:///android_asset/www/sample.html");//웹뷰에 샘플 페이지 로딩
 
         loadButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
+            public void onClick(View v) { //버튼클릭하면 사용자가 입력한 페이지 로딩.
                 webView.loadUrl(urlInput.getText().toString());
             }
         });
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void run() {
                     loadButton.setText("클릭 후 열기");
-                    webView.loadUrl("javascrpt:changeFace()");
+                    webView.loadUrl("javascript:changeFace()"); //자바스크립트 함수 호출
                 }
             });
         }
