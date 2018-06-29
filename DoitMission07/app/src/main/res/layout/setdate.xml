@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical|center_horizontal"
+    android:id = "@+id/relative">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <EditText
+                android:id="@+id/year"
+                android:layout_width="83dp"
+                android:layout_height="wrap_content"
+                android:inputType="number|numberDecimal"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="년"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/month"
+                android:layout_width="47dp"
+                android:layout_height="wrap_content"
+                android:inputType="number|numberDecimal"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="월"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/day"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:inputType="number|numberDecimal"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="일"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id = "@+id/set"
+                android:onClick = "setOnClicked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="설정"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="30dp"/>
+
+            <Button
+                android:id = "@+id/close"
+                android:onClick = "closeOnClicked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="닫기" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
