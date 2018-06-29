@@ -9,6 +9,7 @@ import android.webkit.JsResult;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -39,6 +40,14 @@ public class MainActivity extends AppCompatActivity {
                 webView.loadUrl(urlInput.getText().toString());
             }
         });
+
+        webView.setWebViewClient(new WebViewClient(){
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url){
+                view.loadUrl(url);
+                return true;
+            }
+        });
     }
 
     final class JavaScriptMethods {
@@ -59,8 +68,11 @@ public class MainActivity extends AppCompatActivity {
 
     final class WebBrowserClient extends WebChromeClient {
         public boolean onJsAlert(WebView view, String url, String message, JsResult result) {
-            result.confirm();
+                result.confirm();
             return true;
         }
     }
 }
+
+
+
