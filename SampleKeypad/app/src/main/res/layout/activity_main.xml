@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+  android:orientation = "vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text = "text|textCapWords"
+        android:background="#55aa00aa"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding = "10dp"
+        android:textSize = "18dp"
+        android:inputType="text|textCapWords"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text = "number|numberSigned|numberDecimal"
+        android:background="#55aa00aa"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding = "10dp"
+        android:textSize = "18dp"
+        android:inputType="number|numberSigned|numberDecimal"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text = "textEmailAddress"
+        android:background="#55aa00aa"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding = "10dp"
+        android:textSize = "18dp"
+        android:inputType="textEmailAddress"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text = "textPassword"
+        android:background="#55aa00aa"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding = "10dp"
+        android:textSize = "18dp"
+        android:inputType="textPassword"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text = "phone"
+        android:background="#55aa00aa"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding = "10dp"
+        android:textSize = "18dp"
+        android:inputType="phone"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text = "date"
+        android:background="#55aa00aa"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding = "10dp"
+        android:textSize = "18dp"
+        android:inputType="date"/>
+
+
+</LinearLayout>
