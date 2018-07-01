@@ -2,6 +2,7 @@ package org.androidtown.doitmission_07;
 
 import android.app.ActionBar;
 import android.app.AlertDialog;
+import android.app.DialogFragment;
 import android.app.Fragment;
 import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
@@ -53,7 +54,6 @@ public class MainActivity extends AppCompatActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("생년월일");
         builder.setIcon(android.R.drawable.ic_dialog_alert);
-
         final View Relative = LayoutInflater.from(this).inflate(R.layout.setdate, null, false);
         builder.setView(Relative);
         final AlertDialog dialog = builder.create();
