@@ -22,7 +22,7 @@
             android:id = "@+id/urlInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize = "20dp"/>
+            android:textSize = "20dp" />
     </LinearLayout>
 
     <WebView
