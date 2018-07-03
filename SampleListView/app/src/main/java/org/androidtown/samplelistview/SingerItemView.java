@@ -7,8 +7,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import java.util.jar.Attributes;
-
 public class SingerItemView extends LinearLayout {
     TextView textView, textView2, textView3;
     ImageView imageView;
@@ -25,7 +23,7 @@ public class SingerItemView extends LinearLayout {
 
     public void init(Context context) {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-
+        inflater.inflate(R.layout.singer_item, this, true);
         textView = (TextView) findViewById(R.id.textView);
         textView2 = (TextView) findViewById(R.id.textView2);
         textView3 = (TextView) findViewById(R.id.textView3);
