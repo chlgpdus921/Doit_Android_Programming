@@ -15,5 +15,10 @@
         android:textColor="#ffffff"
         android:textSize="50dp" />
 
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
+    </ListView>
 </LinearLayout>

@@ -10,18 +10,21 @@ import android.widget.TextView;
 public class MainActivity extends ListActivity {
     String[] items = {"mike", "angel", "crow", "john", "ginnie", "sally", "cohen", "rice"};
     TextView textView;
+    ListView listView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        listView = (ListView) findViewById(R.id.listView);
         TextView textView = (TextView) findViewById(R.id.textView);
-        setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items));
+      setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items));
 
     }
-    protected void onListItemClick(ListView I, View v, int position, long id){
+
+    protected void onListItemClick(ListView I, View v, int position, long id) {
         super.onListItemClick(I, v, position, id);
-      //  textView.setText(items[position]);
+        textView.setText(items[position]);
         String text = "position: " + position + " " + items[position];
 
     }
