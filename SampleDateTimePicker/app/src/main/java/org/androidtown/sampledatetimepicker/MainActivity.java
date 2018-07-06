@@ -2,23 +2,27 @@ package org.androidtown.sampledatetimepicker;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
-final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy년 MM월 dd일 HH시 mm분");
-TextView textView;
-DateTimePicker picker;
+    final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy년 MM월 dd일 HH시 mm분");
+    TextView textView;
+    DateTimePicker picker;
+    ScrollView scrollView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        textView = (TextView)findViewById(R.id.textView);
-        picker = (DateTimePicker)findViewById(R.id.picker);
-
+        textView = (TextView) findViewById(R.id.textView);
+        picker = (DateTimePicker) findViewById(R.id.picker);
+        scrollView = (ScrollView) findViewById(R.id.scrollView);
         picker.setOnDateTimeChangedListener(new DateTimePicker.OnDateTimeChangedListener() {
             @Override
             public void onDateTimeChanged(DateTimePicker view, int year, int monthOfYear, int dayOfYear, int hourOfDay, int minute) {
@@ -27,7 +31,7 @@ DateTimePicker picker;
                 textView.setText(dateFormat.format(calendar.getTime()));
             }
         });
-
+        scrollView.fullScroll(View.FOCUS_UP);
         Calendar calendar = Calendar.getInstance();
         calendar.set(picker.getYear(), picker.getMonth(), picker.getDayOfDay(), picker.getCurrentHour(), picker.getCurrentMinute());
         textView.setText(dateFormat.format(calendar.getTime()));
