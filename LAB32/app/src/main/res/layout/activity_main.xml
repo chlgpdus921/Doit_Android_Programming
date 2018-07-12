@@ -38,11 +38,11 @@
             android:layout_height="wrap_content"
             android:text="남" />
 
-        <RadioButton
-            android:id = "@+id/girl"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="여" />
+            <RadioButton
+                android:id="@+id/girl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="여" />
         </RadioGroup>
     </LinearLayout>
 

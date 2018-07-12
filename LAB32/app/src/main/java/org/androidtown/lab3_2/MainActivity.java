@@ -11,7 +11,7 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-EditText name;
+    EditText name;
     CheckBox sms, email;
     RadioButton boy, girl;
     Button button;
@@ -52,7 +52,7 @@ EditText name;
                 if (sms.isChecked()) {
                     s = sms.getText().toString();
                 } else {
-
+                    s = null;
                 }
             }
         });
@@ -62,7 +62,7 @@ EditText name;
                 if (email.isChecked()) {
                     e = email.getText().toString();
                 } else {
-
+                    e = null;
                 }
             }
         });
