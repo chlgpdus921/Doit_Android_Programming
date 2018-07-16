@@ -12,19 +12,7 @@ LinearLayout mLinearLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        mLinearLayout = new LinearLayout(this);
-
-        ImageView img = new ImageView(this);
-        Drawable myImage = getResources().getDrawable(R.drawable.ic_launcher_background);
-        img.setImageDrawable(myImage);
-
-        img.setLayoutParams(new Gallery.LayoutParams(Gallery.LayoutParams.WRAP_CONTENT,
-                Gallery.LayoutParams.WRAP_CONTENT));
-
-        mLinearLayout.addView(img);
-
-        setContentView(mLinearLayout);
+        CustomViewDrawables customViewDrawables = new CustomViewDrawables(this);
+        setContentView(customViewDrawables);
     }
 }
