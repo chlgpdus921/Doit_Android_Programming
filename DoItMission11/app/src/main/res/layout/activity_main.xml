@@ -8,42 +8,41 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-    <Button
-        android:id = "@+id/colorBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="색상" />
 
-    <Button
-        android:id = "@+id/widthBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="굵기" />
+        <Button
+            android:id="@+id/colorBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="색상" />
+
+        <Button
+            android:id="@+id/widthBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="굵기" />
     </LinearLayout>
+
     <RadioGroup
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <RadioButton
-            android:id = "@+id/butt"
+            android:id="@+id/butt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="BUTT" />
 
         <RadioButton
-            android:id = "@+id/round"
+            android:id="@+id/round"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="ROUND" />
+
         <RadioButton
-            android:id = "@+id/square"
+            android:id="@+id/square"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="SQUARE" />
-    </LinearLayout>
     </RadioGroup>
-
 </LinearLayout>

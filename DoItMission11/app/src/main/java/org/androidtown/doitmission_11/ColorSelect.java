@@ -14,7 +14,8 @@ public class ColorSelect extends Activity {
     GridView gridView;
     Button closeBtn;
     ColorDataAdapter adapter;
-public static OnColorSelectedListener listener;
+    public static OnColorSelectedListener listener;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.color);
@@ -23,7 +24,7 @@ public static OnColorSelectedListener listener;
         gridView = (GridView) findViewById(R.id.gridView);
         closeBtn = (Button) findViewById(R.id.closeBtn);
 
-gridView.setBackgroundColor(Color.GRAY);
+        gridView.setBackgroundColor(Color.GRAY);
         gridView.setColumnWidth(14);
         gridView.setVerticalSpacing(4);
         gridView.setHorizontalSpacing(4);
@@ -71,6 +72,7 @@ gridView.setBackgroundColor(Color.GRAY);
         public long getItemId(int position) {
             return 0;
         }
+
         public View getView(int position, View view, ViewGroup group) {
             int rowIndex = position / rowCount;
             int columnIndex = position % rowCount;
@@ -81,7 +83,7 @@ gridView.setBackgroundColor(Color.GRAY);
             Button aItem = new Button(mContext);
             aItem.setText(" ");
             aItem.setLayoutParams(params);
-            aItem.setPadding(4,4,4,4);
+            aItem.setPadding(4, 4, 4, 4);
             aItem.setBackgroundColor(colors[position]);
             aItem.setHeight(120);
             aItem.setTag(colors[position]);
@@ -89,10 +91,10 @@ gridView.setBackgroundColor(Color.GRAY);
             aItem.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-if(ColorSelect.listener != null){
-    ColorSelect.listener.onColorSelected(((Integer)v.getTag()).intValue());
-}
-                    ((ColorSelectDialog)mContext).finish();
+                    if (ColorSelect.listener != null) {
+                        ColorSelect.listener.onColorSelected(((Integer) v.getTag()).intValue());
+                    }
+                    ((ColorSelect) mContext).finish();
                 }
             });
 
