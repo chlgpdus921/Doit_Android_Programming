@@ -1,10 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_width="300dp"
+    android:layout_height="100dp"
+    android:orientation="vertical"
+    android:id = "@+id/layout">
 
-<GridView
-    andorid:
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="굵기 5 size"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:layout_gravity="center"/>
 
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="202dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:max="24"
+        android:progress="5" />
+
+    <Button
+        android:id = "@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="닫   기" />
 </LinearLayout>
